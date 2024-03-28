@@ -1,0 +1,10 @@
+name: tests
+run-name: Nos tests sont en train de se faire
+on: [push]
+jobs:
+  python-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: python -m unittest
